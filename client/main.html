@@ -1,0 +1,41 @@
+<head>
+  <title>farm</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1 class="display-1">Welcome to Farm!</h1>
+      </div>
+    </div> <!-- first row-->
+    {{> hello}}
+    {{> addAnimal}}
+  </div>
+
+</body>
+
+<template name="hello">
+  <button class="anyPress btn btn-outline-info">Click Me</button>
+  <p class="fs-1">You've pressed the button {{counter}} times.</p>
+  <button class="anyPress">Don't Press me</button>
+</template>
+
+<template name="addAnimal">
+  <div class="row">
+    <div class="col">
+      <p class="fs-1">Add Animal</p>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Type</span>
+        <input type="text" class="form-control animalType" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default">
+      </div>
+      <a href="#" class="btn btn-outline-danger js-saveAnimal">Save</a>
+    </div>
+  </div>
+</template>
