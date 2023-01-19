@@ -8,5 +8,9 @@ Template.addAnimal.events({
             'type': type,
             'numLegs': legs
         })
+    },
+    'click .js-showAdd'() {
+        // let addModal = document.querySelector("#addModal")
+        $('#addModal').modal('show')
     }
 })

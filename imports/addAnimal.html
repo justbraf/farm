@@ -1,31 +1,31 @@
 <template name="addAnimal">
-    <div class="row">
-        <div class="col">
-            <p class="display-4">Add Animal</p>
-
+    <div class="row justify-content-center">
+        <div class="col-xl-6">
+            <button class="btn btn-outline-primary js-showAdd">Add an Animal</button>
         </div>
     </div>
-    <div class="row">
-        <div class="col-lg-6">
-            <div class="border border-2 border-warning-subtle p-3">
-                <div class="row">
-                    <div class="col-lg">
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="typeOfAnimal">Type</span>
-                            <input type="text" class="form-control animalType" aria-label="Type of animal"
-                                aria-describedby="typeOfAnimal">
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="legsOfAnimal">Number of legs</span>
-                            <input type="text" class="form-control animalLegs" aria-label="Number of animal legs"
-                                aria-describedby="legsOfAnimal">
-                        </div>
+    <div class="modal" tabindex="-1" id="addModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Animal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="typeOfAnimal">Type</span>
+                        <input type="text" class="form-control animalType" aria-label="Type of animal"
+                            aria-describedby="typeOfAnimal">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="legsOfAnimal">Number of legs</span>
+                        <input type="text" class="form-control animalLegs" aria-label="Number of animal legs"
+                            aria-describedby="legsOfAnimal">
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg text-end">
-                        <a href="#" class="btn btn-outline-success js-saveAnimal">Save</a>
-                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary js-saveAnimal" data-bs-dismiss="modal">Save changes</button>
                 </div>
             </div>
         </div>
