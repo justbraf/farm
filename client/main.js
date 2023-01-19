@@ -3,7 +3,9 @@ import { ReactiveVar } from 'meteor/reactive-var';
 import { Bootstrap } from 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+import '../lib/collection.js'
 import './main.html';
+import '../imports/layout.js'
 
 Template.hello.onCreated(function helloOnCreated() {
   // counter starts at 0
@@ -22,9 +24,3 @@ Template.hello.events({
     instance.counter.set(instance.counter.get() + 1);
   },
 });
-
-Template.addAnimal.events({
-  'click .js-saveAnimal'() {
-    console.debug("save button clicked")
-  }
-})
