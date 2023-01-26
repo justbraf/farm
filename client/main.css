@@ -2,3 +2,16 @@ body {
   padding: 10px;
   font-family: sans-serif;
 }
+
+.icons {
+  font-size: .65em;
+  cursor: pointer;
+}
+
+.iconEdit {
+  color: green;
+}
+
+.iconDel {
+  color: red;
+}

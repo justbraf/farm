@@ -1,31 +1,30 @@
-<template name="addAnimal">
-    <div class="row justify-content-center">
-        <div class="col-xl-6">
-            <button class="btn btn-outline-primary js-showAdd">Add an Animal</button>
-        </div>
-    </div>
-    <div class="modal" tabindex="-1" id="addModal">
+<template name="editAnimal">
+    <div class="modal" tabindex="-1" id="editModal">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Add Animal</h5>
+                    <h5 class="modal-title">Edit Animal</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="input-group mb-3">
+                        <input type="hidden" class="editID">
+                    </div>
+                    <div class="input-group mb-3">
                         <span class="input-group-text" id="typeOfAnimal">Type</span>
-                        <input type="text" class="form-control addAnimalType" aria-label="Type of animal"
+                        <input type="text" class="form-control editAnimalType" aria-label="Type of animal"
                             aria-describedby="typeOfAnimal">
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="legsOfAnimal">Number of legs</span>
-                        <input type="text" class="form-control addAnimalLegs" aria-label="Number of animal legs"
+                        <input type="text" class="form-control editAnimalLegs" aria-label="Number of animal legs"
                             aria-describedby="legsOfAnimal">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary js-saveAnimal" data-bs-dismiss="modal">Save changes</button>
+                    <button type="button" class="btn btn-primary js-editAnimal" data-bs-dismiss="modal">Save
+                        changes</button>
                 </div>
             </div>
         </div>
